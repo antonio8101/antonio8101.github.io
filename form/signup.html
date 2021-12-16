@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+<h1>Signup for more:</h1>
+<form action="https://postb.in/1639492055040-6614799241069" method="post" id="signup">
+    <fieldset>
+        <legend>Dati Personali:</legend>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="lastName">LastName</label>
+        <input type="text" name="userNme" id="lastName">
+        <!-- Data di nascita-->
+        <!-- Luogo di nascita con provincie -->
+    </fieldset>
+    <fieldset>
+        <legend>Seleziona gli argomenti che ti interessano:</legend>
+        <label for="html_checkbox_choice">HTML</label>
+        <input type="checkbox" name="html_checkbox_choice" id="html_checkbox_choice">
+        <label for="css_checkbox_choice">CSS</label>
+        <input type="checkbox" name="html_checkbox_choice" id="css_checkbox_choice">
+        <!-- Definire altre choice-->
+    </fieldset>
+    <!-- Definire il fieldset per il email (email required) -->
+    <fieldset>
+        <legend>Quante email per settimana (max):</legend>
+        <label for="email_qty_range"></label>
+        <input type="range" name="email_qty_range" id="email_qty_range" min="1" max="7" value="1" onchange="result.value=parseInt(email_qty_range.value)">
+        <output name="result">1</output>
+    </fieldset>
+    <br>
+    <button type="submit" form="signup">Invia</button>
+</form>
+</body>
+</html>

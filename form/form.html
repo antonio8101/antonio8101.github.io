@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        div {
+            padding: 10px;
+            border: dotted 1px #9b9b9b;
+            display: inline-block;
+            width: auto;
+        }
+
+        h3 {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        td, th {
+            border-right: #000000 solid 1px;
+            border-top: #000000 solid 1px;
+            text-align: left;
+            padding: 5px;
+        }
+
+
+        table {
+            border-spacing: 0;
+            width: 800px;
+            border-left: #000000 solid 1px;
+            border-bottom: #000000 solid 1px;
+        }
+
+        td.desc {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3>Various type of inputs</h3>
+    <form method="get" action="../index.html">
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Controllo</th>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td class="desc">Pulsante, mostra il testo specificato come valore</td>
+                <td><input type="button" value="Button"></td>
+            </tr>
+            <tr>
+                <td>checkbox</td>
+                <td class="desc">Segno di spunta, consente una sola selezione di multipli valori</td>
+                <td>
+                    <label for="ck">HTML : </label>
+                    <input type="checkbox" name="ck" id="ck">
+                </td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td class="desc">Un controllo che permette di scegliere un colore da una paletta</td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td class="desc">Un controllo per immettere una data (anno mese gionro, senza orario)</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>datetime-local</td>
+                <td class="desc">Un controllo per immettere una data con un orario (senza timezone)</td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td class="desc">Un controllo per immettere un'indirizzo email</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>file</td>
+                <td class="desc">un controllo che permette all'utente di aggiungere un'immagine</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td class="desc">Un controllo che permette di immettere un'immagine da inviare al server</td>
+                <td><input type="hidden"></td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td class="desc">Un bottone grafico, che utilizza un'immagine specificata nell'attributo src</td>
+                <td><input type="image"></td>
+            </tr>
+            <tr>
+                <td>month</td>
+                <td class="desc">Un controllo per immettere un mese e un anno, senza timezone</td>
+                <td><input type="month"></td>
+            </tr>
+            <tr>
+                <td>number</td>
+                <td class="desc">Un controllo per immettere un numero</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td class="desc">Un controllo per immettere una testo, i cui caratteri sono oscurati</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>radio</td>
+                <td class="desc">Un controllo che permette la selezione di un solo valore in un set di possibili
+                    valori
+                </td>
+                <td><input type="radio"></td>
+            </tr>
+            <tr>
+                <td>range</td>
+                <td class="desc">Un controllo per immettere un numero il cui esato valore non è importante (è in un
+                    range)
+                </td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <td>reset</td>
+                <td class="desc">Un bottone che reseta il contenuto degli altri valori</td>
+                <td><input type="reset"></td>
+            </tr>
+            <tr>
+                <td>search</td>
+                <td class="desc">Una singolo campo di testo che consente l'immissione di un testo per effettuare
+                    ricerche. Su alcuni device mostra una lente al posto del pulsante di invio
+                </td>
+                <td><input type="search"></td>
+            </tr>
+            <tr>
+                <td>submit</td>
+                <td class="desc">Un pulsante per inviare le informazioni di un form</td>
+                <td><input type="submit"></td>
+            </tr>
+            <tr>
+                <td>tel</td>
+                <td class="desc">Un controllo per immettere un numero di telefono</td>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td class="desc">Un controllo per immettere una singola linea di testo</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>time</td>
+                <td class="desc">Un controllo per immettere un orario</td>
+                <td><input type="time"></td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td class="desc">Un campo per immettere un indirizzo internet URL</td>
+                <td><input type="url"></td>
+            </tr>
+            <tr>
+                <td>week</td>
+                <td class="desc">Un controllo per immettere una data consistente in settimana-anno</td>
+                <td><input type="week"></td>
+            </tr>
+            <tr>
+                <td>select</td>
+                <td class="desc">Un controllo che consente all'utente di selezionare un opzione predefinita</td>
+                <td>
+                    <select name="whatever" id="1">
+                        <option value="one">One</option>
+                        <option value="two">Two</option>
+                        <option value="three">Three</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>select</td>
+                <td class="desc">Un controllo che consente all'utente di selezionare un opzione predefinita</td>
+                <td>
+                    <textarea name="message" style="width: 100px; height: 100px">
+                        Default Content
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>select</td>
+                <td class="desc">Un controllo che consente all'utente di selezionare un opzione predefinita</td>
+                <td>
+                    <input type="text" pattern="[a-z,A-Z,0-9]">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

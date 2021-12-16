@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML element picture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="padding: 0; margin: 0; overflow: hidden">
+
+<div style="position: fixed; z-index: 1; bottom: 0; right: 0; font-size: 7vw; color: white; font-family: 'Microsoft YaHei Light', sans-serif; padding: 10px">example of picture using</div>
+<div>
+    <picture>
+        <!-- iPhoneX -->
+        <source media="(orientation: portrait) and (max-width: 425px)" srcset="../assets/pictures/mobile-portrait.jpg">
+        <source media="(orientation: landscape) and (max-width: 812px)" srcset="../assets/pictures/mobile-landscape.jpg">
+        <!-- iPadPro -->
+        <source media="(orientation: landscape) and (max-width: 1366px)" srcset="../assets/pictures/tablet-landscape.jpg">
+        <source media="(orientation: portrait) and (max-width: 1024px)" srcset="../assets/pictures/tablet-portrait.jpg">
+        <!-- Desktop and beyond-->
+        <source media="(min-width: 1024px)" srcset="../assets/pictures/desktop.jpg">
+        <!-- Fall back -->
+        <img src="../assets/pictures/desktop.jpg" style="width: 100%; height: auto" alt="Roast">
+    </picture>
+</div>
+</body>
+</html>
