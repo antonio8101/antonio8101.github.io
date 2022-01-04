@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-model</title>
+    <style>
+        .container {
+            background-color: red;
+            width: 100%;
+        }
+
+        .element {
+            float: left;
+            border:RED solid .1em;
+        }
+        .clear-fix {
+            clear: both;
+        }
+        #inner-1 {
+            display: block;
+            background-color: white;
+            box-sizing: border-box;
+            width: 70%;
+        }
+        #inner-2 {
+            display: block;
+            background-color: white;
+            box-sizing: border-box;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="inner-1" class="element">
+        element 1
+    </div>
+    <div id="inner-2" class="element">
+        element 2
+    </div>
+    <div class="clear-fix"></div>
+</div>
+</body>
+</html>
