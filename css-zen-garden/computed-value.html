@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ComputedValue</title>
+    <style>
+        body div{
+            font-size: 32px;
+            padding-top: 10em;
+        }
+
+        body div div{
+            padding-top: initial;
+        }
+    </style>
+</head>
+<body>
+<div>
+<!--    Valore di padding-top = 10em-->
+    <p>Testo di prova</p>
+<!--    Valore di padding-top = 320px-->
+    <div>
+        <p>Testo interno</p>
+    </div>
+</div>
+</body>
+</html>

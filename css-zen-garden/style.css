@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap&family=Waterfall&display=swap&family=Roboto:wght@400&');
+
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body#css-zen-garden, h1, h2, h3, h4, h5, h6, p {
+    padding: unset;
+    margin: unset;
+    font-weight: unset;
+    font-size: initial;
+}
+
+.third-party-container{
+    box-sizing: content-box;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(210deg, #312d86, #008eff50);
+}
+
+a, abbr {
+    all: unset;
+}
+
+.page-wrapper {
+    margin-left: 360px;
+    padding: 50px;
+    max-width: 600px;
+    background: white;
+}
+
+#zen-summary p:last-child {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #312d86;
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: initial;
+    padding: 10px 10px 10px 410px;
+}
+
+#zen-summary p:last-child a {
+    color: #e0971c;
+}
+
+a {
+    color: #312d86;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h3 {
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Thasadith', sans-serif;
+    color: #312d86;
+    font-size: 2em;
+}
+
+p {
+    font-size: revert;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+#zen-intro header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #312d86;
+    color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    margin: 10px 50px 50px 10px;
+}
+
+#zen-summary {
+    position: fixed;
+    top: 345px;
+    left: 10px;
+    width: 300px;
+}
+
+#zen-summary p {
+    font-family: 'Waterfall', cursive;
+    font-size: 37px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+#zen-intro header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    border-bottom: solid 1px #e0971c;
+    position: relative;
+    top: 35%;
+    left: 0;
+    text-align: center;
+    color: #e0971c;
+}
+
+#zen-intro header h2 {
+    font-family: 'Waterfall', cursive;
+    font-size: 34px;
+    color: #c9c9c9;
+    position: relative;
+    top: 35%;
+    left: 0;
+    text-align: center;
+}
+
+h1 {
+    color: red !important;
+}
+h1 {
+    color: green;
+}
