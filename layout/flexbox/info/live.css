@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 50px;
+}
+
+div.container > h1 {
+    display: block;
+    height: 100%;
+    background-color: #2fff33;
+    padding-top: 20px;
+    writing-mode: vertical-rl;
+    transform:scale(-1);
+    position: fixed;
+    top: 0;
+    left: -3px;
+    margin: 0;
+    border-left: 3px solid #000000;
+}
+.prop-body{
+    text-align: justify;
+}
+.prop-type > div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.prop-type > div section:nth-child(2n){
+    padding-left: 20px;
+    border-right: 0;
+}
+.prop-type > h1{
+    position: sticky;
+    top: 0;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: block;
+    background-color: white;
+}
+.item-props{
+    display: block;
+    width: 50%;
+}
+section.item-props{
+    border-bottom: 1px dotted #000;
+    border-right: 1px dotted #000;
+}
+section.item-props > article{
+    margin: 0 60px 50px 0;
+}
+section.item-props > article > img{
+    max-width: 100%;
+}
+section.item-props h2{
+    color: #096a61;
+}
+section.item-props:hover  h2 {
+    color: #2fff33;
+}

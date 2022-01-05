@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@300&family=Thasadith&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="live.css">
+<!--    <style>-->
+<!--        body{-->
+<!--            font-family: 'Roboto', sans-serif;-->
+<!--            font-size: 10px;-->
+<!--        }-->
+<!--        .prop-article > .prop-name,-->
+<!--        .prop-article > .prop-body,-->
+<!--        .prop-article img{-->
+<!--            float: left;-->
+<!--            margin-right: 10px;-->
+<!--        }-->
+<!--        .prop-article > .prop-name{-->
+<!--            width: calc(10% - 10px);-->
+<!--        }-->
+<!--        .prop-article > .prop-body{-->
+<!--            width: calc(40% - 10px);-->
+<!--        }-->
+<!--        .prop-article img{-->
+<!--            max-width: calc(50% - 10px);-->
+<!--            height: 100px;-->
+<!--        }-->
+<!--        h1,h2,h3 {-->
+<!--            font-size: 10px;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        .prop-article::after{-->
+<!--            display: block;-->
+<!--            content: " ";-->
+<!--            clear: both;-->
+<!--            border-bottom: 1px dotted #000;-->
+<!--            padding-bottom: 5px;-->
+<!--        }-->
+
+<!--        article::after {-->
+<!--            clear: both;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<div class="container">
+    <h1>Flexbox properties</h1>
+    <div class="prop-type">
+        <h1>flexbox props. su container</h1>
+        <div>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">flex-direction</h2>
+                    <p class="prop-body">
+                        Specifica la direzione della disposizione degli item.<br>
+                        <strong>row</strong> significa che gli elementi si disporranno lungo il <em>main axis</em>.<br>
+                        <strong>column</strong> significa che gli elementi si disporranno lungo il <em>cross axis</em>.<br>
+                        Entrambi i versi hanno un <strong>reverse</strong>, ossia può essere specificato un orientamento che corre dal lato opposto dell'asse (verso l'origine).
+                    </p>
+                    <img src="../assets/136fig01.jpg" alt="">
+                </article>
+            </section>
+            <section id="flex-wrap" class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">flex-wrap</h2>
+                    <p class="prop-body">
+                        Specifica se gli item si disporranno su una nuova linea, una volta terminato lo spazio
+                        disponibile, oppure no.
+                        &Egrave; disponibile anche un <strong>reverse</strong> per invertire la disposizione.
+                    </p>
+                    <img src="../assets/136fig02.jpg" alt="">
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">justify-content</h2>
+                    <p class="prop-body">
+                        Controlla come gli items si posizioneranno lungo il <em>main axis</em>
+                    </p>
+                    <img src="../assets/137fig01.jpg" alt="">
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">align-items</h2>
+                    <p class="prop-body">
+                        Controlla come gli items si posizioneranno lungo il <em>cross axis</em>
+                    </p>
+                    <img src="../assets/137fig02.jpg" alt="">
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">align-content</h2>
+                    <p class="prop-body">
+                        Se il <a href="#flex-wrap">flex-wrap</a> è abilitato, controlla lo spazio tra le flex rows lungo il cross axis, altrimenti è ignorata.
+                    </p>
+                    <img src="../assets/137fig03.jpg" alt="">
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="prop-type">
+        <h1>flexbox props. sugli items</h1>
+        <div>
+            <section class="item-props">
+            <article class="prop-article">
+                <h2 class="prop-name">flex-grow</h2>
+                <p class="prop-body">
+                    Un numero che specifica il "fattore di crescita" che determina quanto l'item si svilupperà lungo il <em>main axis</em> per riempire lo spazio vuoto del <em>flex-container</em>
+                </p>
+                <img src="../assets/138fig01.jpg" alt="">
+            </article>
+        </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">flex-shrink</h2>
+                    <p class="prop-body">
+                        Un numero che specifica il "fattore di riduzione" che determina quanto l'item si ridurrà lungo il main axis, se richiesto, per evitare <em>l'overflow</em> del contenuto.
+                        <br>
+                        La proprietà è ignorata se il container ha <a href="#flex-wrap">flex-wrap</a> abilitato.
+                    </p>
+                    <img src="../assets/138fig02.jpg" alt="">
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">flex-basis</h2>
+                    <p class="prop-body">
+                        Un numero che specifica se la dismesione iniziale di un item prima che <strong>flex-grow</strong> o <strong>flex-shrink</strong> siano applicati.
+                    </p>
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">flex</h2>
+                    <p class="prop-body">
+                        Flex è solo uno shorthand per controllare <strong>flex-grow flex-shrink flex-basis</strong>.
+                    </p>
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">align-self</h2>
+                    <p class="prop-body">
+                        Controlla come il flex-item è allineato sul cross-axis. Questo sovrascrive il comportamento definito dal flex-container per mezzo della prop <strong>align-item</strong>.
+                        La proprietà è ignorata se il flex-item ha un margin "auto" impostato sul cross axis... (top/bottom)
+                    </p>
+                    <img src="../assets/138fig03.jpg" alt="">
+                </article>
+            </section>
+            <section class="item-props">
+                <article class="prop-article">
+                    <h2 class="prop-name">order</h2>
+                    <p class="prop-body">
+                        Controlla la posizione del flex-item tra gli altri elementi, indipendentemente dall'ordine in cui è specificato nel codice sorgente.
+                    </p>
+                    <img src="../assets/138fig04.jpg" alt="">
+                </article>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>
