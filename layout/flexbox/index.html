@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Ink</h1>
+    </header>
+    <nav>
+        <ul class="site-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/support">Support</a></li>
+            <li class="nav-right">
+                <a href="/about">About</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="flex">
+        <div class="column-main tile">
+            <h1>Team collaboration done right</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus euismod dapibus. Aliquam erat
+                volutpat. Nam sed rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac, fermentum non leo. Morbi
+                lacinia dui ut lacinia hendrerit. Ut rutrum odio id mauris laoreet condimentum. Nullam leo purus,
+                interdum vel accumsan at, egestas ac tortor.</p>
+
+            <h1>Team collaboration done right</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus euismod dapibus. Aliquam erat
+                volutpat. Nam sed rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac, fermentum non leo. Morbi
+                lacinia dui ut lacinia hendrerit. Ut rutrum odio id mauris laoreet condimentum. Nullam leo purus,
+                interdum vel accumsan at, egestas ac tortor.</p>
+
+        </div>
+        <div class="column-sidebar">
+            <div class="tile">
+                <form class="login-form">
+                    <h3>Login</h3>
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </p>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="tile centered">
+                <small>Starting at</small>
+                <div class="cost">
+                    <span class="cost-currency">$</span>
+                    <span class="cost-dollars">20</span>
+                    <span class="cost-cents">20</span>
+                </div>
+                <a href="/pricing" class="cta-button">Sign up</a>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

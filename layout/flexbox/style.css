@@ -1,0 +1,163 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+body{
+    background-color: #709b90;
+    font-family: Calibri, sans-serif;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+/*1 STEP : Apply Flex to site nav */
+
+.site-nav{
+    display: flex;
+    padding: .5em;
+    list-style-type: none;
+    background-color: #5f4b44;
+    border-radius: .2em;
+}
+
+/* reset lobotomized owl on li direct children */
+.site-nav > li {
+    margin-top: 0;
+}
+
+/* set the a to be block and style it */
+.site-nav > li > a{
+    display: block;
+    padding: .5em 1em;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+}
+
+/*2 STEP : apply Flex to site nav */
+
+.site-nav > li:nth-child(1n+2){
+    margin-left: .5em;
+}
+
+.site-nav > li.nav-right {
+    margin-left: auto;
+}
+
+/*3 STEP : layout main area */
+
+main {
+    display: flex;
+}
+
+main > * + *{
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.tile{
+    padding: 1.5em;
+    background-color: white;
+}
+
+.tile :first-child{
+    margin-top: 0;
+}
+
+/*4 STEP : assign flex layout to tiles */
+
+.column-main{
+    flex: 3;
+}
+.column-sidebar{
+    flex: 1;
+}
+
+/*5 STEP : assign flex layout to sidebar tiles */
+
+.column-sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.column-sidebar > .tile{
+    flex: 1;
+}
+
+/* 6 STEP : login tile */
+
+.login-form h3{
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.login-form label{
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input[type=text],
+.login-form input[type=password]{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #dedede;
+    padding: .5em 1em;
+}
+
+.login-form button{
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+/* 7 STEP : special offer tile */
+
+.centered{
+    text-align: center;
+}
+.cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .7;
+}
+.cost > span {
+    margin-top: 0;
+}
+.cost-currency{
+    font-size: 2rem;
+}
+.cost-dollars{
+    font-size: 4rem;
+}
+.cost-cents{
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.cta-button{
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+    padding: .5em 1em;
+}
+
