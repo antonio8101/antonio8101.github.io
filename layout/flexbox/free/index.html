@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox free</title>
+    <style>
+        *, ::before, ::after{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Calibri, sans-serif;
+        }
+
+        .container > div {
+            margin-top: 1.5em;
+        }
+
+        .fbox-1{
+            display: flex;
+            border-radius: 1px;
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+            background: linear-gradient(#709b90, #bfc4c4);
+        }
+        .item-1{
+            margin-top: 0;
+            text-transform: uppercase;
+            padding: .5em 1em;
+            background: white;
+            border: 1px solid #333333;
+            text-align: center;
+        }
+        .fbox-1 > div {
+            width: auto;
+            flex: 1;
+        }
+        .fbox-1 > div + div {
+            margin-left: 1.5em;
+        }
+        .fbox-2 {
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(#709b90, #bfc4c4);
+        }
+        .fbox-2 > div {
+            flex: 1;
+            margin: 10px auto;
+            width: 90%;
+        }
+        .fbox-2 div:first-child{
+            flex: 3;
+        }
+        /* CENTERING */
+        .fbox-3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background: linear-gradient(#709b90, #bfc4c4);
+        }
+        .fbox-3 > div:first-child, .fbox-3 > div:last-child{
+            display: none;
+        }
+        .fbox-3 > div{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--  horizontal alignment -->
+    <div class="fbox-1 main-axis">
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+    </div>
+    <!--  vertical alignment -->
+    <div class="fbox-2 cross-axis">
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+    </div>
+    <!--  vertical centering -->
+    <div class="fbox-3 main-axis-and-cross-axis">
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+        <div class="item-1">item</div>
+    </div>
+</div>
+</body>
+</html>
