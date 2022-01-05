@@ -1,4 +1,4 @@
-:root{
+:root {
     box-sizing: border-box;
 }
 
@@ -12,12 +12,12 @@ body * + * {
     margin-top: 1.5em;
 }
 
-body{
+body {
     background-color: #709b90;
     font-family: Calibri, sans-serif;
 }
 
-.container{
+.container {
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -25,7 +25,7 @@ body{
 
 /*1 STEP : Apply Flex to site nav */
 
-.site-nav{
+.site-nav {
     display: flex;
     padding: .5em;
     list-style-type: none;
@@ -39,7 +39,7 @@ body{
 }
 
 /* set the a to be block and style it */
-.site-nav > li > a{
+.site-nav > li > a {
     display: block;
     padding: .5em 1em;
     background-color: #cc6b5a;
@@ -49,7 +49,7 @@ body{
 
 /*2 STEP : apply Flex to site nav */
 
-.site-nav > li:nth-child(1n+2){
+.site-nav > li:nth-child(1n+2) {
     margin-left: .5em;
 }
 
@@ -63,43 +63,44 @@ main {
     display: flex;
 }
 
-main > * + *{
+main > * + * {
     margin-top: 0;
     margin-left: 1.5em;
 }
 
-.tile{
+.tile {
     padding: 1.5em;
     background-color: white;
 }
 
-.tile :first-child{
+.tile :first-child {
     margin-top: 0;
 }
 
 /*4 STEP : assign flex layout to tiles */
 
-.column-main{
+.column-main {
     flex: 3;
 }
-.column-sidebar{
+
+.column-sidebar {
     flex: 1;
 }
 
 /*5 STEP : assign flex layout to sidebar tiles */
 
-.column-sidebar{
+.column-sidebar {
     display: flex;
     flex-direction: column;
 }
 
-.column-sidebar > .tile{
+.column-sidebar > .tile {
     flex: 1;
 }
 
 /* 6 STEP : login tile */
 
-.login-form h3{
+.login-form h3 {
     margin: 0;
     font-size: .9em;
     font-weight: bold;
@@ -107,13 +108,13 @@ main > * + *{
     text-align: right;
 }
 
-.login-form label{
+.login-form label {
     text-align: left;
     font-weight: bold;
 }
 
 .login-form input[type=text],
-.login-form input[type=password]{
+.login-form input[type=password] {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -121,7 +122,7 @@ main > * + *{
     padding: .5em 1em;
 }
 
-.login-form button{
+.login-form button {
     margin-top: 1em;
     border: 1px solid #cc6b5a;
     background-color: white;
@@ -131,29 +132,35 @@ main > * + *{
 
 /* 7 STEP : special offer tile */
 
-.centered{
+.centered {
     text-align: center;
 }
-.cost{
+
+.cost {
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: .7;
 }
+
 .cost > span {
     margin-top: 0;
 }
-.cost-currency{
+
+.cost-currency {
     font-size: 2rem;
 }
-.cost-dollars{
+
+.cost-dollars {
     font-size: 4rem;
 }
-.cost-cents{
+
+.cost-cents {
     font-size: 1.5rem;
     align-self: flex-start;
 }
-.cta-button{
+
+.cta-button {
     display: block;
     background-color: #cc6b5a;
     color: white;
