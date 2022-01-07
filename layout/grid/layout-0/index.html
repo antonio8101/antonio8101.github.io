@@ -5,11 +5,13 @@
     <title>Layout-0</title>
     <style>
 
+        .container{
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
         .grid{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 0.5em;
+            margin-top: 1.5em;
         }
 
         .grid > * {
@@ -19,17 +21,110 @@
             border-radius: 0.5em;
         }
 
+        .simple-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 0.5em;
+        }
+
+        .named-grid{
+            display: grid;
+            grid-template-columns: [start] 1fr [center-left] 1fr [center-right] 1fr [end];
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 0.5em;
+        }
+
+        .named-grid > .a{
+            grid-column: start / center-right;
+            grid-row: span 2;
+        }
+
+        .named-grid-area{
+            display: grid;
+            grid-template-areas: "title title"
+                                 "nav nav"
+                                 "main aside1"
+                                 "main aside2";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-gap: 0.5em;
+        }
+
+        .named-grid-area > * {
+            background-color: #cc6b5a;
+        }
+
+        .named-grid-area > .a {
+            grid-column: title;
+            grid-row: title;
+            background-color: #2fff33;
+        }
+        .named-grid-area > .b {
+            grid-column: nav;
+            grid-row: nav;
+            background-color: #008eff;
+        }
+        .named-grid-area > .c {
+            grid-column: main;
+            grid-row: main;
+            background-color: #709b90;
+        }
+
+        .named-grid-area > .d {
+            grid-column: aside1;
+            grid-row: aside1;
+            background-color: #9b9b9b;
+        }
+
+        .named-grid-area > .e {
+            grid-column: aside2;
+            grid-row: aside2;
+            background-color: #333333;
+        }
+
+        .named-grid-area{
+            display: grid;
+            grid-template-areas: ". title"
+                                 "nav nav"
+                                 "main aside1"
+                                 "main aside2";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-gap: 0.5em;
+        }
+
     </style>
 </head>
 
 <body>
-<div class="grid">
-  <div class="a">a</div>
-  <div class="b">b</div>
-  <div class="c">c</div>
-  <div class="d">d</div>
-  <div class="e">e</div>
-  <div class="f">f</div>
+<div class="container">
+    <div class="simple-grid grid">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+        <div class="f">f</div>
+    </div>
+
+    <div class="named-grid grid">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+        <div class="f">f</div>
+    </div>
+
+    <div class="named-grid-area grid">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+    </div>
+
 </div>
 </body>
 
