@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Implicit Grid</title>
     <style>
-        * ::after, ::before{
+
+        :root{
             box-sizing: border-box;
-            padding: 0;
-            margin: 0;
+        }
+
+        * ::after, ::before{
+            box-sizing: inherit;
         }
 
         body{
@@ -38,29 +41,45 @@
             color: white;
         }
 
-        .portfolio{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-auto-rows: 1fr;
-            grid-gap: 1em;
-            grid-auto-flow: dense;
+        figure {
+            display: inline-block;
+            max-width: 300px;
+            margin: 0;
         }
 
-        .portfolio .featured{
-            grid-row: span 2;
-            grid-column: span 2;
-        }
+       @supports (display: grid) {
 
-        /* filling unwanted space */
-        figure{
-            display: flex;
-            flex-direction: column;
-        }
+           /*Grid*/
 
-        figure img{
-            flex: 1;
-            object-fit: cover;
-        }
+           .portfolio{
+               display: grid;
+               grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+               grid-auto-rows: 1fr;
+               grid-gap: 1em;
+           }
+
+           .portfolio .featured{
+               grid-row: span 2;
+               grid-column: span 2;
+           }
+
+           /* Grid Dense */
+           .portfolio {
+               grid-auto-flow: dense;
+           }
+
+           /* Filling unwanted space with Flex */
+           figure{
+               display: flex;
+               flex-direction: column;
+               max-width: initial;
+           }
+
+           figure img{
+               flex: 1;
+               object-fit: cover;
+           }
+       }
 
     </style>
 </head>
