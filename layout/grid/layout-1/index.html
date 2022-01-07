@@ -33,12 +33,15 @@
             grid-gap: 1.5em;
         }
 
-        header,
-        nav{
+        header{
             grid-column: 1 / 3;
             grid-row: span 1;
         }
 
+        nav{
+            grid-column: 1 / 3;
+            grid-row: span 1;
+        }
         .main{
             grid-column: 1 / 2;
             grid-row: 3 / 5;
@@ -54,20 +57,7 @@
             grid-row: 4 / 5;
         }
 
-        /* Remaining style */
-
-        .tile{
-            padding: 1.5em;
-            background-color: white;
-        }
-
-        .tile > :first-child{
-            margin-top: 0;
-        }
-
-        .tile * + * {
-            margin-top: 1.5em;
-        }
+        /* Flex */
 
         .site-nav{
             display: flex;
@@ -96,36 +86,6 @@
 
         .site-nav > .nav-right {
             margin-left: auto;
-        }
-
-        .login-form h3 {
-            margin: 0;
-            font-size: .9em;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: right;
-        }
-
-        .login-form label {
-            text-align: left;
-            font-weight: bold;
-        }
-
-        .login-form input[type=text],
-        .login-form input[type=password] {
-            display: block;
-            width: 100%;
-            margin-top: 0;
-            border: 1px solid #dedede;
-            padding: .5em 1em;
-        }
-
-        .login-form button {
-            margin-top: 1em;
-            border: 1px solid #cc6b5a;
-            background-color: white;
-            padding: .5em 1em;
-            cursor: pointer;
         }
 
         .centered{
@@ -162,12 +122,55 @@
             padding: .5em 1em;
         }
 
+        /* Remaining style */
+
+        .tile{
+            padding: 1.5em;
+            background-color: white;
+        }
+
+        .tile > :first-child{
+            margin-top: 0;
+        }
+
+        .tile * + * {
+            margin-top: 1.5em;
+        }
+
+        .login-form h3 {
+            margin: 0;
+            font-size: .9em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: right;
+        }
+
+        .login-form label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .login-form input[type=text],
+        .login-form input[type=password] {
+            display: block;
+            width: 100%;
+            margin-top: 0;
+            border: 1px solid #dedede;
+            padding: .5em 1em;
+        }
+
+        .login-form button {
+            margin-top: 1em;
+            border: 1px solid #cc6b5a;
+            background-color: white;
+            padding: .5em 1em;
+            cursor: pointer;
+        }
 
     </style>
 </head>
 <body>
 <div class="container">
-
     <header>
         <h1>Ink</h1>
     </header>
@@ -189,7 +192,6 @@
             lacinia dui ut lacinia hendrerit. Ut rutrum odio id mauris laoreet condimentum. Nullam leo purus,
             interdum vel accumsan at, egestas ac tortor.</p>
     </main>
-
     <div class="sidebar-top tile">
         <form class="login-form">
             <h3>Login</h3>
@@ -204,7 +206,6 @@
             <button type="submit">Login</button>
         </form>
     </div>
-
     <div class="sidebar-bottom tile centered">
         <small>Starting at</small>
         <div class="cost">
