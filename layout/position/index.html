@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Website</title>
+
+    <style>
+
+        .title > h1{
+            color: #333333;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin: .2em 0;
+        }
+
+        @media (min-width: 20em) and (max-width:35em)  {
+            .title > h1 {
+                font-size: 2.25rem;
+            }
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="style.css" media="(min-width:45em)">
+
+</head>
+
+<body>
+<div class="container">
+    <div id="d-1">d-1</div>
+    <div id="d-2">d-2</div>
+    <div id="d-3">d-3</div>
+    <div id="d-4">d-4</div>
+</div>
+
+<img src="coffee-beans-small.png"
+     srcset="
+     coffee-beans-small.png 560w,
+     coffee-beans-medium.png 800w,
+     coffee-beans-large.png 800w"
+     alt="coffee beans">
+
+</body>
+</html>

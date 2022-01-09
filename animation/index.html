@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        .elm{
+            background: red;
+            border: 5px solid;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .elm{
+            position: relative;
+            animation-name: horizontal-move;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        .elm2{
+            border: 5px solid;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes horizontal-move {
+            from{
+                left: 0;
+            }
+            to{
+                left: 500px;
+            }
+        }
+
+        .elm2{
+            animation-name: over-and-back;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes over-and-back {
+            0% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+            50% {
+                background-color: hsl(271, 49%, 54%, 1);
+                position: relative;
+                left: 50px;
+            }
+            100% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="elm">&nbsp;</div>
+</div>
+<div>
+    <div class="elm2">&nbsp;</div>
+</div>
+</body>
+</html>

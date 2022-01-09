@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform</title>
+    <style>
+        :root{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #008eff;
+            font-family: Calibri, sans-serif;
+        }
+
+        .container{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            perspective: 400px;
+        }
+
+        .card{
+            padding: .5em;
+            max-width: 15em;
+            background-color: white;
+            margin-right: 10px;
+            box-shadow: 5px 10px 25px -16px #000000;
+        }
+
+        .container .card:last-child{
+            margin-right: initial;
+        }
+
+        .card img {
+            max-width: 100%;
+        }
+
+        /* TRANSFORM */
+
+        .container{
+            perspective: 400px;
+        }
+
+        .container .card:first-child{
+            transform: rotateY(30deg);
+            transform-style: preserve-3d;
+        }
+        .container .card:nth-child(3){
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <img src="images/AdobeStock_476250947_Preview.jpeg" alt="lion">
+        <h4>Mrs. Featherstone</h4>
+        <p>
+            She may be a bit frumpy, but Mrs Featherstone gets the job done. She
+            lays her largish cream-colored eggs on a daily basis. She is gregarious
+            to a fault.
+        </p>
+        <p>
+            This Austra White is our most prolific producer.
+        </p>
+    </div>
+    <div class="card">
+        <img src="images/AdobeStock_476250947_Preview.jpeg" alt="lion">
+        <h4>Mrs. Featherstone</h4>
+        <p>
+            She may be a bit frumpy, but Mrs Featherstone gets the job done. She
+            lays her largish cream-colored eggs on a daily basis. She is gregarious
+            to a fault.
+        </p>
+        <p>
+            This Austra White is our most prolific producer.
+        </p>
+    </div>
+    <div class="card">
+        <img src="images/AdobeStock_476250947_Preview.jpeg" alt="lion">
+        <h4>Mrs. Featherstone</h4>
+        <p>
+            She may be a bit frumpy, but Mrs Featherstone gets the job done. She
+            lays her largish cream-colored eggs on a daily basis. She is gregarious
+            to a fault.
+        </p>
+        <p>
+            This Austra White is our most prolific producer.
+        </p>
+    </div>
+    <div class="card">
+        <img src="images/AdobeStock_476250947_Preview.jpeg" alt="lion">
+        <h4>Mrs. Featherstone</h4>
+        <p>
+            She may be a bit frumpy, but Mrs Featherstone gets the job done. She
+            lays her largish cream-colored eggs on a daily basis. She is gregarious
+            to a fault.
+        </p>
+        <p>
+            This Austra White is our most prolific producer.
+        </p>
+    </div>
+    <div class="card">
+        <img src="images/AdobeStock_476250947_Preview.jpeg" alt="lion">
+        <h4>Mrs. Featherstone</h4>
+        <p>
+            She may be a bit frumpy, but Mrs Featherstone gets the job done. She
+            lays her largish cream-colored eggs on a daily basis. She is gregarious
+            to a fault.
+        </p>
+        <p>
+            This Austra White is our most prolific producer.
+        </p>
+    </div>
+</div>
+</body>
+</html>
