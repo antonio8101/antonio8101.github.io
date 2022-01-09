@@ -1,0 +1,89 @@
+@import "colors";
+
+body{
+  color: $brand-blue;
+}
+
+a:link{
+  color: $brand-blue;
+}
+
+.page-heading{
+  color: $brand-blue;
+}
+
+
+$padding-left: 3em;
+
+.note-author{
+  padding-left: $padding-left;
+  font-weight: bold;
+}
+
+.note-body{
+  padding-left: $padding-left * 2;
+}
+
+//nested selector
+
+.site-nav{
+  display: flex;
+
+  > li{
+    margin-top: 0;
+
+    &.is-active {
+      display: block;
+    }
+
+  }
+}
+
+@mixin clearfix {
+  &::before{
+    display: table;
+    content: " ";
+  }
+
+  &::after{
+    clear: both;
+  }
+}
+
+.media{
+  @include clearfix;
+  background-color: #eee;
+}
+
+
+@mixin alert-variation($color, $bg-color){
+  padding: .3em .5em;
+  border: 1px solid $color;
+  color: $color;
+  background-color: $bg-color;
+}
+
+.alert-info{
+  @include alert-variation(blue, lightblue);
+}
+.alert-danger{
+  @include alert-variation(red, pink);
+}
+
+.message{
+  padding: .3em .5em;
+  border-radius: .5em;
+}
+
+.message-info{
+  @extend .message;
+  color: blue;
+  background-color: lightblue;
+}
+
+
+@for $index from 2 to 5 {
+  .nav-links > li:nth-child(#{$index}) {
+    transition-delay: (.1s * $index) - .1s;
+  }
+}
