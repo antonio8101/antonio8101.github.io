@@ -1,0 +1,186 @@
+:root {
+    box-sizing: border-box;
+    transition: all .4s ease;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    transition: inherit;
+}
+
+
+/*
+MOBILE FIRST APPROACH
+ */
+/*
+Start the process by viewing the web page at a small window size
+to simulate what it might look like on a mobile device.
+Adjust some of the CSS to fine tune how the page displays.
+
+... Make the font-size larger
+... Make the h1 font-size smaller
+... Increase the leading
+... Add a small amount of margin to the page edges
+
+By designing for the small screen first we start with a basic design or lowest common denominator and then work
+on enhancing more sophisticated browsers with advanced features or layouts.
+
+This ensures that we're designing an experience that will work for everyone.
+
+It also has the side effect of often helping us realize what content on our website is really important.
+ */
+
+body {
+    font: 1.2em/1.2 Helvetica, aria, sans-serif;
+    margin: 0 3%;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: .9em 0 0 0;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 1.5em 0 0 0;
+}
+
+figure {
+    background: black;
+    border-radius: 5px;
+    color: white;
+    margin: 0 0 .9em 0;
+    padding: 10px;
+    text-align: center;
+}
+
+figcaption {
+    font-size: .8em;
+    padding: .5em .3em 0 .3em;
+}
+
+/* ADAPT TO AVAILABLE SPACE */
+figure{
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    flex: 1;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+section.figures{
+    margin-top: 1.5em;
+}
+
+
+/*
+INTRODUCE NEW BREAKPOINT
+ */
+/*
+For example, the line length might become too long for the text to be easily readable
+Or perhaps the page becomes wide enough that it no long makes sense for the images to display in a stack.
+
+Create a new media query in your browser using the pixel dimension you recorded as the min-width media feature test. Within this breakpoint, change your CSS to do the following:
+
+... Change the background color (to help you see when the media query takes effect)
+... Adjust the font-size if necessary
+... Adjust the page margins
+... Make the photos display in two columns
+ */
+@media screen and (min-width: 794px) {
+    body {
+        background: rgba(0,0,255,.2);
+        margin: 25px 6%;
+    }
+
+    figure {
+        float: left;
+        width: 45%;
+        margin-right: 4.5%;
+    }
+
+    div.container::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+
+/*
+OTHER BREAKPOINT FOR LARGER SCREENS
+ */
+/*
+.. Change the background color
+.. Adjust the font-size if necessary
+.. Adjust the page margins
+.. Make the photos display in three columns
+.. Add a max-width to the page to make sure the line length never gets too long
+ */
+@media screen and (min-width: 1020px) {
+    body {
+        background: rgba(0,255,0,.2);
+    }
+
+    .container{
+        padding: .1em 1.5em;
+        margin: 0 auto;
+        max-width: 1130px;
+        background: rgba(255,255,255,1);
+    }
+}
+
+
+/*
+EFFECTS
+ */
+figure:hover {
+    transition-duration: .5s;
+    background: red;
+    cursor: pointer;
+}
+
+figure:hover img{
+    align-self: center;
+    justify-self: center;
+}
+
+
+/*
+using FLEX instead of FLOAT
+ */
+@media screen and (min-width: 794px) and (max-width: 1019px) {
+    .figures > :nth-child(2n+1){
+        margin-right: .9em;
+    }
+    .figures > :nth-child(2n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 794px) {
+    .figures{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .figures figure{
+        width: calc(50% - .9em);
+    }
+    div.container::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+@media screen and (min-width: 1020px) {
+    body section.figures figure{
+        margin-right: .9em;
+        width: calc(33.5% - .9em);
+    }
+
+    .figures > :nth-child(3n+3){
+        margin-right: 0;
+    }
+}
